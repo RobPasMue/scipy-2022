@@ -1,5 +1,3 @@
-# content of .github/workflows/testing.yaml
-
 name: Test
 
 on: [push, pull_request]
