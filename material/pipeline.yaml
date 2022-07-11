@@ -1,3 +1,5 @@
+executor: parallel
+
 tasks:
 
 - source: tasks/load.py
@@ -30,5 +32,12 @@ tasks:
     nb: output/random-forest-regressor.ipynb
 
 - source: tasks/fit.ipynb
+  name: fit-
   product:
-    nb: output/fit.html
+    nb: output/fit.ipynb
+  grid:
+    model:
+      - sklearn.linear_model.LinearRegression
+      - sklearn.svm.SVR
+      - sklearn.ensemble.GradientBoostingRegressor
+      - sklearn.ensemble.RandomForestRegressor
