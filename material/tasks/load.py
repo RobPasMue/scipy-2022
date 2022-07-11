@@ -61,4 +61,4 @@ print(f'sample is {sample}')
 def divide(x, y):
     return x / y
 
-divide(1, 0)
+divide(1, 2)
